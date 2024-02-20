@@ -6,8 +6,15 @@ class Tag extends Model {}
 
 Tag.init(
   {
-    // define columns
-    
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    tag_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     sequelize,
@@ -17,5 +24,13 @@ Tag.init(
     modelName: 'tag',
   }
 );
+
+Tag.associate = (models) => {
+  Tag.belongsToMany(models.Product, {
+    through: 'product_tag',
+    as: 'products',
+    foreignKey: 'tag_id',
+  });
+};
 
 module.exports = Tag;

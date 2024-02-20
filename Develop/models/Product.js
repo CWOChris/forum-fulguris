@@ -50,4 +50,16 @@ Product.init(
   }
 );
 
+Product.associate = (models) => {
+  Product.belongsTo(models.Category, {
+    foreignKey: 'category_id',
+    onDelete: 'CASCADE',
+  });
+  Product.belongsToMany(models.Tag, {
+    through: 'product_tag',
+    as: 'tags',
+    foreignKey: 'product_id',
+  });
+};
+
 module.exports = Product;

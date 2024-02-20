@@ -25,4 +25,11 @@ Category.init(
   }
 );
 
+Category.associate = (models) => {
+  Category.hasMany(models.Product, {
+    foreignKey: 'category_id',
+    onDelete: 'CASCADE',
+  });
+};
+
 module.exports = Category;
