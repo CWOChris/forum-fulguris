@@ -20,22 +20,22 @@ An SQL database for creating, storing and deleting products/inventory.
 * "cd Develop" "npm init" "npm i" "npm run start" then open inosmina.
 
 ## Usage
-* 
+* Backend technology for inventory management in an e-commerce environment.
 
 ## Credits
-* None
+* @CWOChris
 
 ## License
 This project is licensed under the MIT license. https://opensource.org/licenses/MIT
 
 ## Badges
-* 
+* None
 
 ## Features
 * Credentials that work with the SQL database so that I can create the walkthrough video.
 
 ## Contributing
-* FOR ABOVE Backend technology for inventory management in an e-commerce environment.
+* None
 
 ## Tests
 * Logging and console logs at different points in the code give back errors, also, you will be given a response in insomnia specifying the error encountered whenever one occurs.
